@@ -9,11 +9,12 @@ import java.util.List;
 public class Instants {
     private int dt;
     private Main main;
-    private List<Weather> weatherList;
+    private Weather weatherList;
     private Sys sys;
     private String dt_txt;
 
-    public Instants(int dt, Main main, List<Weather> weatherList, Sys sys, String dt_txt) {
+    public Instants(int dt, Main main, Weather weatherList, Sys sys, String dt_txt) {
+
         this.dt = dt;
         this.main = main;
         this.weatherList = weatherList;
@@ -37,11 +38,11 @@ public class Instants {
         this.main = main;
     }
 
-    public List<Weather> getWeatherList() {
+    public Weather getWeatherList() {
         return weatherList;
     }
 
-    public void setWeatherList(List<Weather> weatherList) {
+    public void setWeatherList(Weather weatherList) {
         this.weatherList = weatherList;
     }
 
