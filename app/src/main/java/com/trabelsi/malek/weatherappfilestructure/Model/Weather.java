@@ -1,27 +1,29 @@
+
 package com.trabelsi.malek.weatherappfilestructure.Model;
 
-/**
- * Created by Spaceclaim on 28/11/2017.
- */
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Weather {
-    private int id;
+
+    @SerializedName("id")
+    @Expose
+    private Integer id;
+    @SerializedName("main")
+    @Expose
     private String main;
+    @SerializedName("description")
+    @Expose
     private String description;
+    @SerializedName("icon")
+    @Expose
     private String icon;
 
-    public Weather(int id, String main, String descritpion, String icon) {
-        this.id = id;
-        this.main = main;
-        this.description = descritpion;
-        this.icon = icon;
-    }
-
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -37,8 +39,8 @@ public class Weather {
         return description;
     }
 
-    public void setDescritpion(String descritpion) {
-        this.description = descritpion;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getIcon() {
@@ -48,4 +50,5 @@ public class Weather {
     public void setIcon(String icon) {
         this.icon = icon;
     }
+
 }

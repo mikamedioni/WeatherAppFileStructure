@@ -166,12 +166,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
             txtCity.setText(String.format("%s,%s",openWeatherMap.getCity().getName(),openWeatherMap.getCity().getCountry()));
             txtLastUpdate.setText(String.format("Last Updated: %s", Common.getDateNow()));
-            Log.d(TAG,openWeatherMap.getInstantsList().toString());
-            txtDescription.setText(String.format("%s", openWeatherMap.getInstantsList().get(0).getWeatherList().getDescription()));
-            txtHumidity.setText(String.format("%d%%",openWeatherMap.getInstantsList().get(0).getMain().getHumidity()));
-            txtCelsius.setText(String.format("%.2f °C",openWeatherMap.getInstantsList().get(0).getMain().getTemp()));
+            Log.d(TAG,openWeatherMap.getList().get(0).toString());
+            txtDescription.setText(String.format("%s", openWeatherMap.getList().get(0).getWeather().get(0).getDescription()));
+            txtHumidity.setText(String.format("%d%%",openWeatherMap.getList().get(0).getMain().getHumidity()));
+            txtCelsius.setText(String.format("%.2f °C",openWeatherMap.getList().get(0).getMain().getTemp()));
             Picasso.with(MainActivity.this)
-                    .load(Common.getImage(openWeatherMap.getInstantsList().get(0).getWeatherList().getIcon()))
+                    .load(Common.getImage(openWeatherMap.getList().get(0).getWeather().get(0).getIcon()))
                     .into(imageView);
         }
     }

@@ -1,15 +1,14 @@
+
 package com.trabelsi.malek.weatherappfilestructure.Model;
 
-/**
- * Created by Spaceclaim on 28/11/2017.
- */
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 
 public class Sys {
-    private String pod;
 
-    public Sys(String pod) {
-        this.pod = pod;
-    }
+    @SerializedName("pod")
+    @Expose
+    private String pod;
 
     public String getPod() {
         return pod;
@@ -18,4 +17,5 @@ public class Sys {
     public void setPod(String pod) {
         this.pod = pod;
     }
+
 }
